@@ -23,13 +23,20 @@ Es recomendable que coloqueis el email de Github:
 Para subir un cambio:
 1. Abrir la carpeta en Code 👉(**la carpeta que habéis clonado antes**)
 2. Hacéis un cambio en cualquier archivo 👉(**Guardad**)
-3. Abrid el icono de control de cambios: ![alt text](image.png)
-4. Usamos el icono del + para añadir todo:
+3. Abrid el icono de control de cambios:
+<br>
+![alt text](image.png)
+<br>
+5. Usamos el icono del + para añadir todo:
+<br>
 ![alt text](image-1.png)
-5. Escribimos un mensaje que explique qué hemos hecho
-6. Commit & push
+<br>
+6. Escribimos un mensaje que explique qué hemos hecho
+7. Commit & push
+<br>
 ![alt text](image-2.png)
-7. gg ez
+<br>
+9. gg ez
 
 ---
 
