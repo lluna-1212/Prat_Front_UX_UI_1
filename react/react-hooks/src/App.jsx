@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Timer from "./Timer.jsx";
+import Form from "./Form.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 import "./App.css";
 
@@ -49,6 +50,8 @@ export default function Contador() {
       <hr />
       <h2>Timer</h2>
       <Timer />
+      <hr />
+      <Form />
     </div>
   );
 }

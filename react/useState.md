@@ -1,4 +1,3 @@
-```md
 # 📘 useState en React – Ejemplos prácticos
 
 `useState` es un hook que te permite añadir estado a tus componentes funcionales en React.
