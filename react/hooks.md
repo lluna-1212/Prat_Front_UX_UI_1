@@ -10,6 +10,8 @@
 
 > **Definición**: Los hooks son funciones que permiten a los componentes funcionales tener estado, efectos secundarios, y otras capacidades de React que antes estaban solo disponibles en clases.
 
+- [Extesión React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+
 ### ⚡ Objetivo:
 - Entender que los hooks reemplazan a las clases para lógica de estado, efectos, refs, etc.
 
