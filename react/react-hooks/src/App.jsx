@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 import "./App.css";
 
 export default function Contador() {
@@ -7,11 +8,17 @@ export default function Contador() {
   useEffect(() => {
     // Solo cuando carga el componente
     console.log("Renderizado inicial del componente");
+    toast("Renderizado inicial del componente", {
+      theme: "dark"
+    });
   }, []);
   useEffect(() => {
     // Cada vez que cambia el estado
     document.title = `Contador: ${contador}`;
     console.log("Contador actualizado:", contador);
+    toast("Contador:" + contador, {
+      theme: "dark"
+    });
   }, [contador]);
 
   return (
@@ -37,6 +44,7 @@ export default function Contador() {
       {/* Ejercicio: hacer un botón de decrementar */}
       {/* Ejercicio: hacer un botón de resetear a 0 */}
       <button onClick={() => setContador(contador + 1)}>Incrementar</button>
+      <ToastContainer />
     </div>
   );
 }
