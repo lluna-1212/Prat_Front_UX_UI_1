@@ -1,0 +1,26 @@
+import { useState, useEffect } from "react";
+
+export default function Timer() {
+  const [segundos, setSegundos] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setSegundos((prev) => prev + 1);
+    }, 1000);
+
+    // Limpiar el intervalo cuando se desmonte el componente
+    return () => clearInterval(intervalId);
+  }, []); // Solo se ejecuta al montar (una vez)
+
+  const handleInterval = () => {
+    
+  };
+
+  return (
+    <div>
+      <h2>Timer: {segundos} segundos</h2>
+      {/* Añadir handleTimer para parar el setInterval con clearInterval */}
+      <button onClick={() => handleInterval()}>Parar</button>
+    </div>
+  );
+}

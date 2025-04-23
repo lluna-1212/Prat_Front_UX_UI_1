@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Timer from "./Timer.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 import "./App.css";
 
@@ -45,6 +46,9 @@ export default function Contador() {
       {/* Ejercicio: hacer un botón de resetear a 0 */}
       <button onClick={() => setContador(contador + 1)}>Incrementar</button>
       <ToastContainer />
+      <hr />
+      <h2>Timer</h2>
+      <Timer />
     </div>
   );
 }

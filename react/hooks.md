@@ -82,6 +82,8 @@ export default function Contador() {
    - Use `useState` para mostrar segundos transcurridos.
    - Limpie el intervalo en `useEffect` con return.
 
+   - Variante: Pomodoro (temporizador de X minutos)
+
 2. Ampliar el componente:
    - Añadir botón para pausar/reanudar.
    - Añadir `useRef` para guardar el `intervalId`.

@@ -4,10 +4,31 @@
 - Aprender cómo usar `setInterval` con `useEffect`
 - Mostrar segundos transcurridos
 
+### setInterval y clearInterval en JavaScript
+
+- setInterval: ejecuta una función cada X milisegundos
+- clearInterval: parar la ejecución de la función
+
+```javascript
+  let ahora = new Date().toLocaleTimeString();
+  console.log(ahora);
+
+  const timer = setInterval(() => {
+    console.log("Hora actual: " + new Date().toLocaleTimeString())  
+  }, 1_000); // 1 seg
+
+  // Hora actual: 17:57:11
+  // Hora actual: 17:57:12
+  // Hora actual: 17:57:13
+  // Hora actual: 17:57:14
+
+  clearInterval(timer); // Parar la ejecución del timer
+```
+
 ### 💡 Código:
 
 ```jsx
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function Timer() {
   const [segundos, setSegundos] = useState(0);
