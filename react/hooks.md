@@ -26,6 +26,8 @@
 | `useRef`     | Guarda referencias mutables sin provocar renders          |
 | `useContext` | Accede a valores globales definidos en un Context         |
 
+Más hooks de React 18/19 en [más hooks](./mas-hooks.md)
+
 ---
 
 ## 3️⃣ Ejemplo en React (web)
