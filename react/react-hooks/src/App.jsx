@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Timer from "./Timer.jsx";
 import Timer2 from "./Timer2.jsx";
 import Form from "./Form.jsx";
+import ThemeChanger from "./ejercicios/ThemeChanger.jsx";
 import { ToastContainer, toast } from "react-toastify";
 import "./App.css";
 
@@ -55,6 +56,9 @@ export default function Contador() {
 
       <ToastContainer />
       <h1>My Awesome App is amazing!</h1>
+
+      <ThemeChanger />
+      <hr />
 
       <h2>Timer</h2>
       <Timer />
