@@ -9,16 +9,17 @@ import Pokemons from "./ejercicios/Pokemons.jsx";
 import EnfocarInput from "./ejercicios/EnfocarInput.jsx";
 
 export default function Contador() {
+  // Ejemplo del primer timer:
   // const [contador, setContador] = useState(0);
-  // const [theme, setTheme] = useState("light");
-  const [theme2, setTheme2] = useState("light");
+  //
+  const [theme, setTheme2] = useState("light");
 
   const toggleTheme = () => {
-    setTheme2(theme2 === "light" ? "dark" : "light");
-    console.log("Theme2 cambiado en contexto: " + theme2);
+    setTheme2(theme === "light" ? "dark" : "light");
+    console.log("Theme2 cambiado en contexto: " + theme);
   };
 
-  const ThemeContext = createContext({ modo: theme2, setModo: setTheme2 });
+  const ThemeContext = createContext({ modo: theme, setModo: setTheme2 });
   // No usamos setModo pero se puede pasar a otro componente:
   const { modo } = useContext(ThemeContext);
   // const { modo } = useTheme();
