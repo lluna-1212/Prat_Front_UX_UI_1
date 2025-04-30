@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState, createContext, useContext } from "react";
 import Timer from "./Timer.jsx";
 import Timer2 from "./Timer2.jsx";
 import Form from "./Form.jsx";
@@ -10,6 +10,19 @@ import EnfocarInput from "./ejercicios/EnfocarInput.jsx";
 
 export default function Contador() {
   // const [contador, setContador] = useState(0);
+  // const [theme, setTheme] = useState("light");
+  const [theme2, setTheme2] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme2(theme2 === "light" ? "dark" : "light");
+    console.log("Theme2 cambiado en contexto: " + theme2);
+  };
+
+  const ThemeContext = createContext({ modo: theme2, setModo: setTheme2 });
+  // No usamos setModo pero se puede pasar a otro componente:
+  const { modo } = useContext(ThemeContext);
+  // const { modo } = useTheme();
+  console.log("modo:", modo);
 
   useEffect(() => {
     // Solo cuando carga el componente
@@ -29,55 +42,65 @@ export default function Contador() {
   // }, [contador]);
 
   return (
-    <div className="App">
-      {/* El tamaño de los h1 va a cambiar próximamente (este año) 
-      -> Hay que colocar estilos y no dejarlos con los defaults
-      */}
-      {/* <section>
-        <h1>nivel 1</h1>
-        <section>
-          <h1>nivel 1 anidado</h1>
+    <ThemeContext.Provider value={{ modo }}>
+      <div className="App">
+        {/* El tamaño de los h1 va a cambiar próximamente (este año) 
+        -> Hay que colocar estilos y no dejarlos con los defaults
+        */}
+        {/* <section>
+          <h1>nivel 1</h1>
           <section>
-            <h1>nivel 1 anidado 2</h1>
+            <h1>nivel 1 anidado</h1>
             <section>
-              <h1>nivel 1 anidado 3</h1>
+              <h1>nivel 1 anidado 2</h1>
+              <section>
+                <h1>nivel 1 anidado 3</h1>
+              </section>
             </section>
           </section>
-        </section>
-      </section> */}
+        </section> */}
 
-      {/* Ejemplo con contador básico */}
-      {/* <h1>Contador: {contador}</h1> */}
+        {/* Ejemplo con contador básico */}
+        {/* <h1>Contador: {contador}</h1> */}
 
-      {/* Ejercicio: hacer un botón de decrementar */}
-      {/* Ejercicio: hacer un botón de resetear a 0 */}
+        {/* Ejercicio: hacer un botón de decrementar */}
+        {/* Ejercicio: hacer un botón de resetear a 0 */}
 
-      {/* <button onClick={() => setContador(contador + 1)}>Incrementar</button> */}
-      {/* <hr /> */}
-      {/* Final del ejemplo con contador básico */}
+        {/* <button onClick={() => setContador(contador + 1)}>Incrementar</button> */}
+        {/* <hr /> */}
+        {/* Final del ejemplo con contador básico */}
 
-      <ToastContainer />
-      <h1>My Awesome App is amazing!</h1>
+        <ToastContainer />
+        <h1>My Awesome App is amazing!</h1>
 
-      <EnfocarInput />
-      <hr />
+        <div>
+          <button onClick={toggleTheme}>
+            {/* colocamos el valor desde el contexto: */}
+            Cambiar a {modo}
+          </button>
+        </div>
+        <hr />
 
-      <Pokemons />
-      <hr />
+        <EnfocarInput />
+        <hr />
 
-      <ThemeChanger />
-      <hr />
+        <Pokemons />
+        <hr />
 
-      <h2>Timer</h2>
-      <Timer />
+        <ThemeChanger />
+        <hr />
 
-      <h2>Timer 2</h2>
-      <Timer2 />
+        <h2>Timer</h2>
+        <Timer />
 
-      <hr />
+        <h2>Timer 2</h2>
+        <Timer2 />
 
-      <h2>Form</h2>
-      <Form />
-    </div>
+        <hr />
+
+        <h2>Form</h2>
+        <Form />
+      </div>
+    </ThemeContext.Provider>
   );
 }
