@@ -5,6 +5,7 @@ import Form from "./Form.jsx";
 import ThemeChanger from "./ejercicios/ThemeChanger.jsx";
 import { ToastContainer, toast } from "react-toastify";
 import "./App.css";
+import Pokemons from "./ejercicios/Pokemons.jsx";
 
 export default function Contador() {
   // const [contador, setContador] = useState(0);
@@ -56,6 +57,9 @@ export default function Contador() {
 
       <ToastContainer />
       <h1>My Awesome App is amazing!</h1>
+
+      <Pokemons />
+      <hr />
 
       <ThemeChanger />
       <hr />
