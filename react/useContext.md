@@ -1,4 +1,3 @@
-```md
 # 📘 useContext en React con ejemplos prácticos
 
 `useContext` permite acceder a valores globales sin tener que pasar props manualmente.
@@ -18,6 +17,7 @@ function Boton() {
   return <button className={tema}>Soy un botón en modo {tema}</button>;
 }
 
+// 2. Consumir el contexto
 export default function App() {
   return (
     <TemaContext.Provider value="dark">
