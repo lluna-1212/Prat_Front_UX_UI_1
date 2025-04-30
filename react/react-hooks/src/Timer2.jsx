@@ -1,15 +1,6 @@
-## ✅ PARTE 2 – Pausar y reanudar el timer con `useRef`
-
-### 🧠 Objetivo:
-- Usar `useRef` para guardar `intervalId`
-- Añadir botón para pausar/reanudar
-
-### 💡 Código:
-
-```jsx
 import React, { useState, useEffect, useRef } from "react";
 
-export default function TimerAvanzado() {
+export default function Timer2() {
   const [segundos, setSegundos] = useState(0);
   const [activo, setActivo] = useState(true);
   const intervalRef = useRef(null);
@@ -37,12 +28,3 @@ export default function TimerAvanzado() {
     </div>
   );
 }
-```
-
----
-
-### 🎓 Explicación clave:
-- `useRef` mantiene su valor entre renders sin causar re-render.
-- Cuando `activo` cambia, el `useEffect` se ejecuta:
-  - Si `activo` es `true`, inicia el `setInterval`.
-  - Si no, se limpia automáticamente el intervalo anterior.
