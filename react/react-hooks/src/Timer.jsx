@@ -12,8 +12,13 @@ export default function Timer() {
     return () => clearInterval(intervalId);
   }, []); // Solo se ejecuta al montar (una vez)
 
+  useEffect(() => {
+    console.log("segundos:", segundos);
+    document.title = `Contador: ${segundos}`;
+  }, [segundos]);
+
   const handleInterval = () => {
-    
+    console.log("click");
   };
 
   return (

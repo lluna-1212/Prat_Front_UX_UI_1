@@ -1,31 +1,31 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Timer from "./Timer.jsx";
 import Form from "./Form.jsx";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 import "./App.css";
 
 export default function Contador() {
-  const [contador, setContador] = useState(0);
+  // const [contador, setContador] = useState(0);
 
   useEffect(() => {
     // Solo cuando carga el componente
-    console.log("Renderizado inicial del componente");
+    // console.log("Renderizado inicial del componente");
     toast("Renderizado inicial del componente", {
-      theme: "dark"
+      theme: "dark",
     });
   }, []);
-  useEffect(() => {
-    // Cada vez que cambia el estado
-    document.title = `Contador: ${contador}`;
-    console.log("Contador actualizado:", contador);
-    toast("Contador:" + contador, {
-      theme: "dark"
-    });
-  }, [contador]);
+
+  // useEffect(() => {
+  //   // Cada vez que cambia el estado
+  //   document.title = `Contador: ${contador}`;
+  //   console.log("Contador actualizado:", contador);
+  //   toast("Contador:" + contador, {
+  //     theme: "dark"
+  //   });
+  // }, [contador]);
 
   return (
     <div className="App">
-
       {/* El tamaño de los h1 va a cambiar próximamente (este año) 
       -> Hay que colocar estilos y no dejarlos con los defaults
       */}
@@ -42,15 +42,25 @@ export default function Contador() {
         </section>
       </section> */}
 
-      <h1>Contador: {contador}</h1>
+      {/* Ejemplo con contador básico */}
+      {/* <h1>Contador: {contador}</h1> */}
+
       {/* Ejercicio: hacer un botón de decrementar */}
       {/* Ejercicio: hacer un botón de resetear a 0 */}
-      <button onClick={() => setContador(contador + 1)}>Incrementar</button>
+
+      {/* <button onClick={() => setContador(contador + 1)}>Incrementar</button> */}
+      {/* <hr /> */}
+      {/* Final del ejemplo con contador básico */}
+
       <ToastContainer />
-      <hr />
+      <h1>My Awesome App is amazing!</h1>
+
       <h2>Timer</h2>
       <Timer />
+
       <hr />
+
+      <h2>Form</h2>
       <Form />
     </div>
   );
