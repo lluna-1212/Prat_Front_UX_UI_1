@@ -68,3 +68,7 @@
 ## 🌐 `useContext`
 - **Modo global de accesibilidad**: Cambiar tamaño de texto o colores desde cualquier componente.
 - **Multi-tema o diseño adaptable**: Implementar un selector de temas con estilos personalizados.
+
+---
+
+Más ejercicios por niveles en [más ejercicios](./mas-ejercicios.md) 🧙‍♂️
