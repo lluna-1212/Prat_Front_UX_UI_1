@@ -31,6 +31,10 @@ También es importante que si el servidor y React están en puertos diferentes
 que ambos puedan comunicarse. Esto se logra con **CORS** (Cross-Origin Resource 
 Sharing), que ya hemos configurado en el servidor Express.
 
+![alt text](image.png)
+
+![alt text](image-1.png)
+
 ## 🛠 Cómo usarlo
 
 Instala las dependencias:
