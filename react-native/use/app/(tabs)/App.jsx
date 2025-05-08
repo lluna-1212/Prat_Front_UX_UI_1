@@ -2,9 +2,13 @@
 // useContext es una API de React que te permite leer el valor de un contexto.
 
 // 1. ¿Qué pasaría si movemos el hook use fuera del condicional en el componente Button?
+// Respuesta 1: Moverlo fuera significaría que el recurso se intentaría leer en cada renderizado del componenete Button, independeientemente de esa condición.
 // 2. ¿Cómo se comportaría la aplicación si el ThemeContext.Provider no estuviera presente?
+// Respuesta 2: La aplicación se comportaría de manera inesperada o incluso fallar si intenta acceder a propiedades de este valor por defecto.
 // 3. ¿Por qué es útil poder usar el hook use dentro de condicionales?
+// Respuesta 3: Ofrece varios beneficios como: Acceso declarativo a recursos, Lógica más simple y Menos código repetitivo.
 // Y, finalmente, cómo se haría esto si no tuviésemos el hook use, ¿sería posible?
+// Respuesta 4: Sí, sería posible lograr la funcionalidad de manera similar (especialmente el acceso condicional a recursos) sin el hook use, pero generalmente requeríria más código y un enfoque diferente.
 //
 import { createContext, use } from 'react';
 
