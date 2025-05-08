@@ -10,6 +10,17 @@
 // Y, finalmente, cómo se haría esto si no tuviésemos el hook use, ¿sería posible?
 // Respuesta 4: Sí, sería posible lograr la funcionalidad de manera similar (especialmente el acceso condicional a recursos) sin el hook use, pero generalmente requeríria más código y un enfoque diferente.
 //
+
+/** Revisión de respuestas:
+ * Nota: 8/10
+ *
+ * 1, 3, 4 son correctas
+ * Respuesta 2 podría ser más precisa sobre el error específico que ocurriría
+ * Falta mención de la regla fundamental de React sobre el orden de los hooks
+ * No se menciona la práctica recomendada de usar null en lugar de false en el componente Button
+ * Falta un ejemplo práctico de cómo implementar la solución alternativa mencionada en la respuesta 4
+ */
+
 import { createContext, use } from 'react';
 
 const ThemeContext = createContext(null);
