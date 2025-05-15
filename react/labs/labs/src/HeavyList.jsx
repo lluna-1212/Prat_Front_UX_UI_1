@@ -19,7 +19,7 @@ import { memo, useMemo } from "react";
  *   4. Experimenta con useMemo para memorizar la lista generada.
  *   5. Bonus: instala react-window y crea una versión virtualizada.
  */
-export default function HeavyList({ count = 5_000 }) {
+export default function HeavyList({ count = 7_500 }) {
   // ✅ TODO: genera un array de longitud "count" con useMemo
   const items = useMemo(() => {
     return Array.from({ length: count }, (_, i) => ({
