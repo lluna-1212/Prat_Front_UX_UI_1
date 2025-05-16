@@ -5,7 +5,14 @@ export default function Counter() {
 
     return (
         <>
-            <h2>Contador: {count}</h2>
+            <h2 style={{
+                width: '80%', 
+                fontSize: '1.5rem', 
+                margin: '1em auto', 
+                textAlign: 'center'
+                }}>
+                Contador: {count}
+            </h2>
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
