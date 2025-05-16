@@ -6,6 +6,7 @@ import Counter from './Counter';
 
 function App() {
   return (
+    // Provider global para login:
     <AuthProvider>
       <div className="App" style={{
         display: 'flex',
@@ -27,11 +28,12 @@ function App() {
               My <code style={{
                 fontFamily: 'monospace',
                 fontStyle: 'italic',
-              }}>&lt;App.jsx&gt;</code> is Amazing v2 🐴🐴🐴
+              }}>&lt;App.jsx</code> is Amazing v2 🐴🐴🐴
           </h1>
           <hr />
           <DummyLogin />
           <hr />
+          {/* Contador con su Provider: */}
           <CounterProvider>
             <Counter />
             </CounterProvider>
