@@ -96,8 +96,8 @@ useEffect(() => {
 
 ## 4 · Mini‑Labs
 
-- [Lab Refactor en Context](../labs/1.lab-fps.md)
-- [Lab ](../labs/1.lab-fps.md)
+- [Lab Refactor en Context](../labs/3.refactor-context.md)
+- [Lab useAuth](../labs/4.useAuth.md)
 
 ---
 
