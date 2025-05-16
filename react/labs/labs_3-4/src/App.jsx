@@ -1,23 +1,27 @@
 import { useState } from 'react';
-import { useAuth } from './context/authContext';
+// Primer ejemplo:
+// import { useAuth } from './context/authContext';
+// Importación desde auth/index.js:
+import { useAuth } from './auth';
 import './App.css'
 
 function LoginForm() {
-  const { login } = useAuth();
+  const { user, login } = useAuth();
   const [loading, setLoading] = useState(false);
 
   const handleLogin = () => {
     setLoading(true);
-    // Simula una llamada a API
     setTimeout(() => {
       login({ id: 1, name: 'Pepe' });
       setLoading(false);
     }, 1000);
   };
 
+  // Si ya hay user, no renderizamos nada (o podrías devolver otro UI)
+  if (user) return null;
+
   return (
     <button onClick={handleLogin} disabled={loading}>
-      {/* Se puede hacer con Suspense... */}
       {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
     </button>
   );
