@@ -1,9 +1,14 @@
 import { useState } from 'react';
+
 // Primer ejemplo:
-// import { useAuth } from './context/authContext';
+// import { useAuth } from './contexts/authContext';
+
 // Importación desde auth/index.js:
 import { useAuth } from './auth';
+
 import './App.css'
+import { CounterProvider } from './providers/counterProvider';
+import Counter from './Counter';
 
 function LoginForm() {
   const { user, login } = useAuth();
@@ -44,10 +49,15 @@ function UserProfile() {
 
 function App() {
   return (
-    <>
+    <>      
       <h1>My Pony is Amazing 🐴</h1>
       <UserProfile />
       <LoginForm />
+      <hr />
+      {/* Contador con su Provider: */}
+      <CounterProvider>
+        <Counter />
+      </CounterProvider>
     </>
   );
 }
