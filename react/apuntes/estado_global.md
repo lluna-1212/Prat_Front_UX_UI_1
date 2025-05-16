@@ -51,6 +51,90 @@ export function AuthProvider({ children }) {
 > [!TIP]
 > Exporta el *hook* (`useAuth`) en lugar del contexto. Así encapsulas detalles y evitas el *import‑chain* de `useContext(AuthCtx)` en cada archivo.
 
+Ejemplo de cómo hacer lo anterior:
+
+```txt
+src/
+├─ auth/
+│  ├─ index.js        ← punto único de exportación
+│  ├─ AuthProvider.jsx
+│  └─ authContext.js ← (opcional, interno)
+```
+
+---
+
+**src/auth/authContext.js**
+
+```js
+import { createContext } from 'react';
+
+const AuthCtx = createContext(null);
+
+export default AuthCtx;
+```
+
+---
+
+**src/auth/AuthProvider.jsx**
+
+```jsx
+import React, { useState } from 'react';
+import AuthCtx from './auth-context';
+
+export function AuthProvider({ children }) {
+  const [user, setUser] = useState(null);
+  const login  = (u) => setUser(u);
+  const logout = () => setUser(null);
+
+  return (
+    <AuthCtx.Provider value={{ user, login, logout }}>
+      {children}
+    </AuthCtx.Provider>
+  );
+}
+```
+
+---
+
+**src/auth/index.js**
+
+```js
+// Exporta **solo** lo que la app necesita: el Provider y el Hook.
+// Nunca expongas AuthCtx directamente.
+export { AuthProvider } from './AuthProvider';
+export { default as useAuth } from './useAuth';
+```
+
+---
+
+**src/auth/useAuth.js**
+
+```js
+import { useContext } from 'react';
+import AuthCtx from './auth-context';
+
+export default function useAuth() {
+  return useContext(AuthCtx);
+}
+```
+
+---
+
+Ahora, en el resto de tu app:
+
+```js
+import { AuthProvider, useAuth } from './auth';
+
+function UserProfile() {
+  const { user, logout } = useAuth();
+  // …
+}
+```
+
+> \[!TIP]
+> **Exporta el hook (`useAuth`) y el provider (`AuthProvider`) desde un único módulo**. Así evitas tener que hacer `import { useContext } from 'react'; import AuthCtx from '…';` en cada archivo y mantienes el contexto totalmente encapsulado.
+
+
 ---
 
 ## 2 · Estado global minimalista con Zustant | Jotai
