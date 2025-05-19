@@ -1,7 +1,7 @@
 **1. Introducción a Node.js y Express**
 
 ![Node](node.png)
-s
+
 **1.1 ¿Qué es Node.js?**
 
 Node.js es un entorno de ejecución de JavaScript basado en el motor V8 de Chrome. Permite ejecutar código JavaScript en el servidor, ofreciendo un modelo de E/S asíncrono y basado en eventos que lo hace eficiente y escalable.
