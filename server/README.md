@@ -43,16 +43,33 @@ Para conectar a bases de datos relacionales, conviene entender las siguientes op
 *Ejemplo básico:*
 
 ```sql
+-- Cread un archivo db.sqlite
+-- Usando la extensión SQLite
+-- Cread un archivo create_table.sql
+-- Ejecutad "Run Query" con este archivo
 CREATE TABLE usuarios (
-  id INT PRIMARY KEY AUTO_INCREMENT,
+  id INTEGER NOT NULL PRIMARY KEY,
   nombre VARCHAR(100) NOT NULL,
   email VARCHAR(100) UNIQUE NOT NULL
 );
+-- Ejecutad "Run Query" con este archivo
+-- insertar usuario:
 INSERT INTO usuarios (nombre, email) VALUES ('Ana', 'ana@example.com');
+-- selecciona los usuario cuyo email termina en example.com:
 SELECT * FROM usuarios WHERE email LIKE '%@example.com';
+-- seleccionar todos:
+SELECT * FROM usuarios;
+-- solo el email:
+SELECT email FROM usuarios;
+-- actualizar nombre:
 UPDATE usuarios SET nombre = 'Ana Pérez' WHERE id = 1;
+-- Borrar el id 1:
 DELETE FROM usuarios WHERE id = 1;
 ```
+
+**Extensiones SQLite**
+- **SQLite:** alexcvzz.vscode-sqlite
+- **SQLite Viewer:** qwtel.sqlite-viewer
 
 **3. ORM Sequelize**
 

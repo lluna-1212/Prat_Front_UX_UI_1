@@ -1,0 +1,22 @@
+{
+  "name": "lab_1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "sequelize",
+    "mysql",
+    "postgres",
+    "sqlite"
+  ],
+  "author": "César P.",
+  "license": "ISC",
+  "description": "I am coding",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
