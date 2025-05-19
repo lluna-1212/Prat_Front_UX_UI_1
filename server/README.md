@@ -54,6 +54,10 @@ UPDATE usuarios SET nombre = 'Ana Pérez' WHERE id = 1;
 DELETE FROM usuarios WHERE id = 1;
 ```
 
+**Extensiones SQLite**
+- **SQLite:** alexcvzz.vscode-sqlite
+- **SQLite Viewer:** qwtel.sqlite-viewer
+
 **3. ORM Sequelize**
 
 Sequelize es un ORM para Node.js que abstrae SQL en modelos JavaScript y facilita cambiar entre proveedores (MySQL, Postgres, SQLite, etc.).
