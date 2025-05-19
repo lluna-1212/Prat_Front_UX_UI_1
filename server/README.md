@@ -118,7 +118,8 @@ npx sequelize-cli db:migrate
 - [Labs 2: Conexión a Base de Datos con Sequelize](./labs/2.sequelize.md)
 - [Labs 3: Cambio de Provider y Consultas Avanzadas](./labs/3.providers.md)
 - [Lab 4: Autenticación con JWT y Refresh Tokens](./labs/4.login_service.md)
-- [lab 5: Blog con Posts y Categorías](./labs/5.blog.md)
+- [Lab 5: Blog con Posts y Categorías](./labs/5.blog.md)
+- [Lab 6: Dashboard en React para el Blog](./labs/6.dashboard.md)
 
 ---
 
