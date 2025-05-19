@@ -33,7 +33,7 @@ export function useAuth() {
 ```jsx
 // file: AuthProvider.jsx
 import React, { useState } from 'react';
-import { AuthCtx } from '../context/authContext';
+import { AuthCtx } from '../contexts/authContext';
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
@@ -79,7 +79,7 @@ export default AuthCtx;
 
 ```jsx
 import React, { useState } from 'react';
-import AuthCtx from './auth-context';
+import AuthCtx from './authContext';
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
@@ -111,7 +111,7 @@ export { default as useAuth } from './useAuth';
 
 ```js
 import { useContext } from 'react';
-import AuthCtx from './auth-context';
+import AuthCtx from './authContext';
 
 export default function useAuth() {
   return useContext(AuthCtx);

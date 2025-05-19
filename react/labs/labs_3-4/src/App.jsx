@@ -1,50 +1,45 @@
 import { useState } from 'react';
-import { useAuth } from './context/authContext';
-import './App.css'
-
-function LoginForm() {
-  const { login } = useAuth();
-  const [loading, setLoading] = useState(false);
-
-  const handleLogin = () => {
-    setLoading(true);
-    // Simula una llamada a API
-    setTimeout(() => {
-      login({ id: 1, name: 'Pepe' });
-      setLoading(false);
-    }, 1000);
-  };
-
-  return (
-    <button onClick={handleLogin} disabled={loading}>
-      {/* Se puede hacer con Suspense... */}
-      {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
-    </button>
-  );
-}
-
-function UserProfile() {
-  const { user, logout } = useAuth();
-
-  if (!user) {
-    return <p>No estás autenticado.</p>;
-  }
-
-  return (
-    <div>
-      <p>¡Hola, {user.name}!</p>
-      <button onClick={logout}>Cerrar sesión</button>
-    </div>
-  );
-}
+import { AuthProvider } from './providers/AuthProvider';
+import { DummyLogin } from './providers/AuthProvider';
+import { CounterProvider } from './providers/counterProvider';
+import Counter from './Counter';
 
 function App() {
   return (
-    <>
-      <h1>My Pony is Amazing 🐴</h1>
-      <UserProfile />
-      <LoginForm />
-    </>
+    // Provider global para login:
+    <AuthProvider>
+      <div className="App" style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '1rem',
+        fontFamily: 'sans-serif',
+        padding: '1rem',
+        margin: '0 auto'
+      }}>
+        <header className="App-header">
+          <h1 style={{
+            width: '80%', 
+            fontSize: '2rem', 
+            margin: '1em auto', 
+            textAlign: 'center'
+            }}>
+              My <code style={{
+                fontFamily: 'monospace',
+                fontStyle: 'italic',
+              }}>&lt;App.jsx</code> is Amazing v2 🐴🐴🐴
+          </h1>
+          <hr />
+          <DummyLogin />
+          <hr />
+          {/* Contador con su Provider: */}
+          <CounterProvider>
+            <Counter />
+            </CounterProvider>
+          </header>
+        </div>
+    </AuthProvider>
   );
 }
 
