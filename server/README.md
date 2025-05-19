@@ -55,9 +55,15 @@ CREATE TABLE usuarios (
 -- Ejecutad "Run Query" con este archivo
 -- insertar usuario:
 INSERT INTO usuarios (nombre, email) VALUES ('Ana', 'ana@example.com');
-
+-- selecciona los usuario cuyo email termina en example.com:
 SELECT * FROM usuarios WHERE email LIKE '%@example.com';
+-- seleccionar todos:
+SELECT * FROM usuarios;
+-- solo el email:
+SELECT email FROM usuarios;
+-- actualizar nombre:
 UPDATE usuarios SET nombre = 'Ana Pérez' WHERE id = 1;
+-- Borrar el id 1:
 DELETE FROM usuarios WHERE id = 1;
 ```
 
