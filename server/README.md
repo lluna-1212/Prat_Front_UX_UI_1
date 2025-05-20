@@ -71,6 +71,11 @@ DELETE FROM usuarios WHERE id = 1;
 - **SQLite:** alexcvzz.vscode-sqlite
 - **SQLite Viewer:** qwtel.sqlite-viewer
 
+### Tabla Tareas 
+
+- [Queries de Tabla Usuarios](./queries/usuarios/)
+- [Queries de Tabla Tareas](./queries/tareas/)
+
 **3. ORM Sequelize**
 
 Sequelize es un ORM para Node.js que abstrae SQL en modelos JavaScript y facilita cambiar entre proveedores (MySQL, Postgres, SQLite, etc.).

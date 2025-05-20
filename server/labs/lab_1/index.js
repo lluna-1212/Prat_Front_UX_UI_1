@@ -23,7 +23,10 @@ app.get('/tareas', (req, res) => {
 app.get('/tareas/:id', (req, res) => {
   const tareaId = req.params.id;
   // Filtro por id
-  res.json({ id: tareaId });
+  const tareaIndex = tareas.findIndex(
+    tarea => `${tarea.id}` === `${tareaId}`
+  );
+  res.json(tareas[tareaIndex]);
 })
 app.post('/tareas', (req, res) => {
   const tarea = req.body;

@@ -38,7 +38,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/tareas/1",
+					"raw": "http://localhost:3000/tareas/6",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -46,7 +46,7 @@
 					"port": "3000",
 					"path": [
 						"tareas",
-						"1"
+						"6"
 					]
 				}
 			},
@@ -94,7 +94,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{    \n    \"titulo\": \"Mi Tarea #1\"\n}",
+					"raw": "{    \n    \"titulo\": \"Mi Tarea #########6\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -102,7 +102,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/tareas/1",
+					"raw": "http://localhost:3000/tareas/id",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -110,7 +110,7 @@
 					"port": "3000",
 					"path": [
 						"tareas",
-						"1"
+						"id"
 					]
 				}
 			},
