@@ -38,7 +38,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/tareas/6",
+					"raw": "http://localhost:3000/tareas/4",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -46,7 +46,7 @@
 					"port": "3000",
 					"path": [
 						"tareas",
-						"6"
+						"4"
 					]
 				}
 			},
@@ -62,7 +62,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{    \n    \"titulo\": \"Mi Tarea 123\",\n    \"completada\": true\n    }",
+					"raw": "{    \n    \"titulo\": \"Mi Tarea asdf\",\n    \"completada\": true\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -94,7 +94,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{    \n    \"titulo\": \"Mi Tarea #########6\"\n}",
+					"raw": "{    \n    \"titulo\": \"Mi Tarea #########4\",\n    \"completada\": 0\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -102,7 +102,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/tareas/id",
+					"raw": "http://localhost:3000/tareas/4",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -110,7 +110,7 @@
 					"port": "3000",
 					"path": [
 						"tareas",
-						"id"
+						"4"
 					]
 				}
 			},
@@ -125,7 +125,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/tareas/1",
+					"raw": "http://localhost:3000/tareas/4",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -133,7 +133,7 @@
 					"port": "3000",
 					"path": [
 						"tareas",
-						"1"
+						"4"
 					]
 				}
 			},
