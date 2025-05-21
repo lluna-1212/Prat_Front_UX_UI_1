@@ -1,0 +1,1 @@
+const { Tarea } = require('./models');

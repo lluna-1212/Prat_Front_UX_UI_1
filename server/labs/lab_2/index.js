@@ -1,5 +1,6 @@
 const express = require('express');
 // const cors = require('cors');
+const { Tarea } = require=('../models');
 const db = require('./db')
 
 const app = express();
@@ -20,19 +21,32 @@ app.get('/', (req, res) => {
   res.send('Hola mundo! Bienvenid@ a mi servidor! 👋');
 })
 
-app.get('/tareas', (req, res) => {
+app.get('/tareas', async (req, res) => {
   // Conectar a la db
   // Ejecutar el query de SELECT * ...
   // Devolver la salida de ese query
-  db.all('SELECT * FROM Tareas', (err, rows) => {
-      if (err) return res.status(500).json({ error: err.message });
-      res.json(rows);
-    });
-})
-
-app.get('/tareas/:id', (req, res) => {
+  try {
+    const tareas = await Tarea.findAll();
+    res.json(tareas);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Error al obtener las tareas'});
+  }
+});
+// Obtener una tarea por ID
+app.get('/tareas/:id', async (req, res) => {
   const tareaId = req.params.id;
-
+try{
+  const tarea = await Tarea.findByPk(tareaId);
+  if(tarea){
+    res.json(tarea);
+  } else {
+    res.status(404).json({error: 'Tarea no encontrada'});
+  }
+} catch (error) {
+  console.error(error);
+  res.status(500).json({error: 'Error al obtener la tarea'});
+}
   db.get(
     'SELECT * FROM Tareas WHERE id = ?',
     [tareaId],
@@ -48,9 +62,16 @@ app.get('/tareas/:id', (req, res) => {
   );
 });
 
-app.post('/tareas', (req, res) => {
+//Crear una nueva tarea
+app.post('/tareas', async (req, res) => {
   const { titulo, completada = 0 } = req.body;
-
+  try{
+    const nuevaTarea = await Tarea.create({titulo, completada});
+    res.status(201).json(nuevaTarea);
+  } catch (error){
+    console.error(error);
+    res.status(500).json({error: 'Error al crear la tarea'});
+  }
   db.run(
     'INSERT INTO Tareas (titulo, completada) VALUES (?, ?)',
     [titulo, completada ? 1 : 0],
@@ -69,10 +90,22 @@ app.post('/tareas', (req, res) => {
   );
 });
 
-app.put('/tareas/:id', (req, res) => {
+//Actualizar una tarea 
+app.put('/tareas/:id', async (req, res) => {
   const tareaId = req.params.id;
   const { titulo, completada } = req.body;
-
+  try {
+    const tarea = await Tarea.findByPk(tareaId);
+    if (tarea) {
+      await tarea.update({titulo, completada});
+      res.json({mensaje: 'Tarea actualizada correctamente' });
+    } else {
+      res.status(404).json({error: 'Tarea no encontrada'});
+    }
+  } catch (error){
+    console.error(error);
+    res.status(500).json({error: 'Error al actualizar la tarea'});
+  }
   // Construir dinámicamente SET según campos recibidos
   const campos = [];
   const valores = [];
@@ -112,9 +145,21 @@ app.put('/tareas/:id', (req, res) => {
   });
 });
 
-app.delete('/tareas/:id', (req, res) => {
+// Eliminar una tarea
+app.delete('/tareas/:id', async (req, res) => {
   const tareaId = req.params.id;
-
+  try {
+    const tarea = await Tarea.findByPk(tareaId);
+    if (tarea) {
+      await tarea.destroy();
+      res.json({mensaje: 'Tarea eliminada correctamente'});
+    } else {
+      res.status(404).json({ error: 'Tarea no encontrada'});
+    }
+  }catch (error) {
+    console.error(error);
+    res.status(500).json({error: 'Error al eliminar la tarea'});
+  }
   db.run(
     'DELETE FROM Tareas WHERE id = ?',
     [tareaId],
