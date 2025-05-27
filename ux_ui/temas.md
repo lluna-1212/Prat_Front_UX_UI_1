@@ -128,6 +128,7 @@
 - [Material Icons](https://fonts.google.com/icons): estándar para sistemas Android y web.
 - [Icon Accessibility Guidelines](https://www.w3.org/WAI/tutorials/images/icons/): buenas prácticas para iconos accesibles.
 - [Heroicons](https://heroicons.com/): iconos limpios y legibles, ideales para acompañar texto.
+- [Icomoon](https://icomoon.io/): herramienta para crear iconos personalizados que se pueden usar como texto.
 
 ### 🌟 Ejemplos
 **✅ Buena práctica:**
