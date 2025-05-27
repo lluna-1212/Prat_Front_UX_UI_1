@@ -145,9 +145,18 @@
 ![alt text](image.png)
 
 * **Wireframes**: bocetos simples de las pantallas.
+  - Herramientas: [Balsamiq](https://balsamiq.com/), [Whimsical](https://whimsical.com/), [Figma](https://www.figma.com/), [Lucidchart](https://www.lucidchart.com/), [Miro](https://miro.com/), papel y lápiz.
+
 * **Mockups**: diseño más detallado y visual.
+  - Herramientas: [Figma](https://www.figma.com/), [Adobe XD](https://www.adobe.com/products/xd.html), [Sketch](https://www.sketch.com/), [Canva](https://www.canva.com/), [Framer](https://www.framer.com/).
+
 * **Prototipos**: versión interactiva que simula la app real.
-* Herramientas: *Figma*, *Adobe XD*, *Canva*, *Balsamiq*, papel y lápiz.
+  - Herramientas: [Figma Prototyping](https://www.figma.com/prototyping/), [InVision](https://www.invisionapp.com/), [Proto.io](https://proto.io/), [Marvel](https://marvelapp.com/), [Webflow](https://webflow.com/).
+
+* **Herramientas todo en uno**:
+  - [Figma](https://www.figma.com/) - Wireframing, diseño y prototipado
+  - [Adobe XD](https://www.adobe.com/products/xd.html) - Diseño y prototipado
+  - [Framer](https://www.framer.com/) - Prototipado avanzado con interacciones realistas
 
 ---
 
