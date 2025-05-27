@@ -83,19 +83,15 @@ Sequelize es un ORM para Node.js que abstrae SQL en modelos JavaScript y facilit
 **3.1 Instalación y configuración**
 
 ```bash
-npm install sequelize sequelize-cli mysql2  # o pg y pg-hstore para Postgres
+npm install sequelize sequelize-cli sqlite3  # o pg y pg-hstore para Postgres
 ```
 
-Crear `config/config.js` con entornos:
+Crear `config/config.js` (o `.json`) con entornos:
 
 ```js
 module.exports = {
   development: {
-    dialect: 'mysql',
-    host: 'localhost',
-    database: 'mi_db',
-    username: 'root',
-    password: ''
+    /* ruta y dialecto (mirad propuesta de solución en labs_2) */
   },
   test: { /* similar */ },
   production: { /* similar */ }
@@ -107,6 +103,9 @@ module.exports = {
 ```bash
 npx sequelize-cli model:generate --name Usuario --attributes nombre:string,email:string
 ```
+
+> [!NOTE]
+> En labs_2 hay un ejemplo del modelo `Tarea`
 
 Esto crea migración y modelo en `/models/usuario.js`:
 
@@ -120,6 +119,9 @@ module.exports = (sequelize, DataTypes) => {
 };
 ```
 
+> [!NOTE]
+> En labs_2 hay un ejemplo del modelo `Tarea`
+
 **3.3 Migraciones**
 Ejecutar migraciones:
 
@@ -131,8 +133,11 @@ npx sequelize-cli db:migrate
 
 * **Crear**: `Usuario.create({ nombre, email })`
 * **Leer**: `Usuario.findAll()`, `Usuario.findByPk(id)`
-* **Actualizar**: `usuario.update({ nombre: 'Nuevo' })`
-* **Eliminar**: `usuario.destroy()`
+* **Actualizar**: `Usuario.update({ nombre: 'Nuevo' })`
+* **Eliminar**: `Usuario.destroy()`
+
+> [!NOTE]
+> En labs_2 hay un ejemplo del modelo `Tarea`
 
 **4. Laboratorios**
 
