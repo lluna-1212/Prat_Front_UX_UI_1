@@ -136,6 +136,7 @@
   - Usa iconos simples y siempre acompañados de texto en menús y filtros.
 
 **❌ Mala práctica:**
+- [arngren.net](https://arngren.net/) -> Por dónde empezar... 🙂‍↕️
 - Webs de apps sin etiquetas (algunas interfaces móviles como Instagram Reels en sus inicios)
   - Iconos sin texto que no explican su función hasta que el usuario prueba por ensayo y error.
 
