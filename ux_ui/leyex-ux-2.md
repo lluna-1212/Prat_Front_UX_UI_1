@@ -72,9 +72,9 @@
 
 ## Referencias
 
-[1]: https://uxenespanol.com/articulo/10-leyes-principales-de-uxui?utm_source=chatgpt.com "10 leyes principales de UX/UI - UX en Español"
-[2]: https://lawsofux.com/es/ley-de-tesler/?utm_source=chatgpt.com "Ley De Tesler - Laws of UX"
-[3]: https://formiux.com/ley-de-hick/?utm_source=chatgpt.com "Ley de Hick en UX - ¿Cómo funciona y cuando se aplica? - Formiux"
-[4]: https://lawsofux.com/es/ley-de-fitts/?utm_source=chatgpt.com "Ley De Fitts - Laws of UX"
-[5]: https://keepcoding.io/blog/que-es-el-efecto-von-restorff-aplicado-a-ux/?utm_source=chatgpt.com "¿Qué es el efecto Von Restorff aplicado a UX? - KeepCoding"
-[6]: https://www.nngroup.com/articles/ten-usability-heuristics/?utm_source=chatgpt.com "10 Usability Heuristics for User Interface Design - NN/g"
+1. [10 leyes principales de UX/UI - UX en Español](https://uxenespanol.com/articulo/10-leyes-principales-de-uxui)
+2. [Ley De Tesler - Laws of UX](https://lawsofux.com/es/ley-de-tesler/)
+3. [Ley de Hick en UX - ¿Cómo funciona y cuando se aplica? - Formiux](https://formiux.com/ley-de-hick/)
+4. [Ley De Fitts - Laws of UX](https://lawsofux.com/es/ley-de-fitts/) 
+5. [¿Qué es el efecto Von Restorff aplicado a UX? - KeepCoding](https://keepcoding.io/blog/que-es-el-efecto-von-restorff-aplicado-a-ux/) 
+6. [10 Usability Heuristics for User Interface Design - NN/g](https://www.nngroup.com/articles/ten-usability-heuristics/) 
